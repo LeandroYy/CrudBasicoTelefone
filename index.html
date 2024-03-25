@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Editar Contato</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row justify-content-center">
+                        <div class="col-auto col-md-4 pt-1">
+                            <input class="form-control me-2" id="nomeEdit" type="text" aria-label="Nome" minlength="2"
+                                required>
+                        </div>
+                        <div class="col-auto col-md-5 pt-1">
+                            <input class="form-control me-2" id="telefoneEdit" maxlength="16" type="text"
+                                aria-label="Telefone" onkeypress="return somenteNumerosEdit (event)" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <input type="text" id="idIn" name="idIn" style="visibility: hidden;"> <button type="button"
+                        class="btn btn-primary" onclick="editarContato()">Salvar alteracões</buttons>
+                </div>
+            </div>
+        </div>
+    </div>
+<a href="http://https://wa.me/31992165754"></a>
+    <div class="container-fluid">
+        <div class="row py-4 justify-content-center bg bg-primary ">
+            <div class="col-auto col-md-1 pt-1">
+                <h4><a class="navbar-brand">Contatos</a></h4>
+            </div>
+            <div class="col-auto col-md-6">
+                <button class="btn btn-dark mx-5" type="button" data-bs-toggle="collapse" data-bs-target="#formcadastro"
+                    aria-expanded="false" aria-controls="collapseExample">
+                    Cadastrar
+                </button>
+            </div>
+            <div class="col-auto col-md-4 pt-1 align-self-end">
+                <input class="form-control me-2" type="text" id="nomeBusca" placeholder="Buscar contato por nome"
+                    aria-label="Nome" oninput="filtro()">
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar collapse bg bg-secondary"  id="formcadastro">
+        <div class="container-fluid justify-content-center">
+            <div class="row justify-content-center">
+                <div class="col-auto col-md-5 pt-1">    
+                    <input class="form-control me-2" id="nome" type="text" placeholder="Nome" aria-label="Nome" minlength="2" 
+                    required>
+                </div>
+                <div class="col-auto col-md-5 pt-1">
+                    <input class="form-control me-2" id="telefone" maxlength= "11" type= "text" placeholder="Telefone"
+                    aria-label= "Telefone" onkeypress="return somenteNumeros (event)" required>
+                </div>
+                <div class = "col-md-1 pt-1 text-center">
+                    <button class="btn btn-outline-dark" data-bs-toggle="collapse" data-bs-target="#formcadastro" id="btncadastro" 
+                    type="button" onclick="cadastraNovocontato()">+</button>
+                </div> 
+            </div> 
+        </div> 
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row justify-content-center" id="tela">
+
+        </div>
+    </div>
+
+
+
+        <script src="app.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"></script>
+    
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</body>
+
+</html>
